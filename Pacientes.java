@@ -1,11 +1,11 @@
-public class Pacientes {
-    private String nome;
-    private String cpf;
-    private String telefone;
-    private String dataNascimento;
+public class Paciente {
+    private final String nome;
+    private final String cpf;
+    private final String telefone;
+    private final String dataNascimento;
     private final int senha;
 
-    public Pacientes(String nome, String cpf, String telefone, String dataNascimento, int senha) {
+    public Paciente(String nome, String cpf, String telefone, String dataNascimento, int senha) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -17,35 +17,28 @@ public class Pacientes {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getCpf() {
         return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
     public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
     public int getSenha() {
         return senha;
+    }
+
+    @Override
+    public String toString() {
+        return "Senha: " + senha
+                + "\nNome: " + nome
+                + "\nCPF: " + cpf
+                + "\nTelefone: " + telefone
+                + "\nData de nascimento: " + dataNascimento;
     }
 }
